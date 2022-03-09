@@ -22,7 +22,7 @@ class CreateAdvtsTable extends Migration
             $table->string('title', 100);
             $table->text('text');
             $table->integer('price');
-            $table->string('img', 100);
+            $table->longText('img');
             $table->timestamps();
         });
     }

@@ -31,12 +31,27 @@
                         </div>
                     @endif
 
-<form action="/advt" method="post" enctype="multipart/form-data">
-    <input name="_token" type="hidden" value="{{ csrf_token() }}">
-    <input type="file" multiple name="file[]">
-    <button type="submit">Загрузить</button>
+                    {!!Form::open(['route' => 'advt.store', 'files' => true,'method'=>'POST'])!!}
+                    {!!Form::text('header',null,['class' => 'form-control']);!!}
+                    <br><br>
+                    {!! Form::textarea('text'); !!}
+                    <br><br>
+                    {!!Form::text('price',null,['class' => 'form-control','placeholder' => 'цена']);!!}
+                    <br><br>
+                    {!!Form::select('city', ['1' => 'Рощино', '2' => 'Восток'], '1');!!}
+                    <br><br>
 
-</form>
+
+                    {!! Form::select('category', array('Категории' => $data ), null) !!}
+
+                    <br><br>
+                    {!! Form::file('file[]', ['multiple' => true]) !!}
+                    <br><br>
+                    {!! Form::submit('Click Me!'); !!}
+
+                    {!! Form::close() !!}
+
+
 
 
                 </div>

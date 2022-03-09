@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use Illuminate\Http\Request;
+use App\Models\Advt;
+use Illuminate\Support\Facades\Auth;
 
 class AdvtController extends Controller
 {
@@ -23,7 +26,16 @@ class AdvtController extends Controller
      */
     public function create()
     {
-        return view('advt.create');
+
+        $i = 0;
+        $cat = Category::all();
+       // $data = $cat['name'];
+        foreach ($cat as $item) {
+            $data[$i] = $item->name;
+            $i++;
+        }
+
+        return view('advt.create',compact('data'));
     }
 
     /**
@@ -39,14 +51,37 @@ class AdvtController extends Controller
 
 
 
+
     public function store(Request $request)
     {
+
+
+           $i = 0;
+           $list = [];
+           $img;
+
         foreach ($request->file() as $file) {
             foreach ($file as $f) {
-                $f->move(storage_path('images'), time().'_'.$f->getClientOriginalName());
+                $f->move(storage_path('images'), time() . '_' . $f->getClientOriginalName());
+                $list[$i] =  time() . '_' . $f->getClientOriginalName();
+              $i++;
             }
+
+            $img  = json_encode($list);
+
+
+            $record = new Advt;
+            $record->user_id = Auth::id();
+            $record->category_id = $request->category;
+            $record->title = $request->header;
+            $record->text  =  $request->text;
+            $record->price =$request->price;
+            $record->img = $img;
+            $record->save();
+
+//echo $request->input('text');
+           // return "Успех";
         }
-        return "Успех";
     }
 
 
