@@ -27,7 +27,7 @@
                 <div class="row multi-columns-row">
                     @foreach ($advert as $item)
                     <div class="col-sm-6 col-md-3 col-lg-3">
-                        <div class="shop-item-image"><img src="" >
+                        <div class="shop-item-image"><img src="***************" >
                             <div class="shop-item-detail"><a class="btn btn-round btn-b"><span class="icon-phone"> позвонить</span></a></div>
                         </div>
                         <h4 class="shop-item-title font-alt"><a href="#">Accessories Pack</a></h4>£9.00
