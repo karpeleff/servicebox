@@ -19,7 +19,6 @@
                         </div>
                     </div>
 
-
                     @if (count($errors) > 0)
                         <div class="alert alert-danger">
                             <strong>Whoops!</strong> There were some problems with your input.<br><br>
@@ -41,24 +40,21 @@
                     {!!Form::select('city', ['1' => 'Рощино', '2' => 'Восток'], '1');!!}
                     <br><br>
 
-
                     {!! Form::select('category', array('Категории' => $data ), null) !!}
 
                     <br><br>
                     {!! Form::file('file[]', ['multiple' => true]) !!}
                     <br><br>
+
                     {!! Form::submit('Click Me!'); !!}
 
                     {!! Form::close() !!}
-
-
-
 
                 </div>
             </div>
         </div>
     </div>
-
+    <img src="{{ asset('storage/1646803606_product-8.jpg') }}" alt="" title="">
 
 
 @endsection

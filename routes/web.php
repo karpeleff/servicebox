@@ -5,6 +5,7 @@ use App\Http\Controllers\RoleController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\AdvtController;
+use App\Models\Advt;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,7 +19,10 @@ use App\Http\Controllers\AdvtController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $advert = Advt::all();
+
+    return view('welcome')->with('advert', $advert);
+
 });
 
 Auth::routes();

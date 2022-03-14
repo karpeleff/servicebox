@@ -35,6 +35,9 @@ class AdvtController extends Controller
             $i++;
         }
 
+       // $advert = Advt::all();
+
+
         return view('advt.create',compact('data'));
     }
 
@@ -55,6 +58,11 @@ class AdvtController extends Controller
     public function store(Request $request)
     {
 
+        $request->validate([
+            'price' => 'required',
+            'header' => 'required',
+        ]);
+
 
            $i = 0;
            $list = [];
@@ -62,7 +70,7 @@ class AdvtController extends Controller
 
         foreach ($request->file() as $file) {
             foreach ($file as $f) {
-                $f->move(storage_path('images'), time() . '_' . $f->getClientOriginalName());
+                $f->move(storage_path('app/public'), time() . '_' . $f->getClientOriginalName());
                 $list[$i] =  time() . '_' . $f->getClientOriginalName();
               $i++;
             }
@@ -81,6 +89,7 @@ class AdvtController extends Controller
 
 //echo $request->input('text');
            // return "Успех";
+            return   redirect('advt/create');
         }
     }
 
