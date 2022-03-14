@@ -8,7 +8,7 @@
                         <div class="caption-content">
                             <div class="font-alt mb-30 titan-title-size-1">Сервис бесплатных обьявлений</div>
                             <div class="font-alt mb-30 titan-title-size-4">для частных лиц</div>
-                            <div class="font-alt mb-40 titan-title-size-1">Your online fashion destination</div><a class="section-scroll btn btn-border-w btn-round" href="#latest">Learn More</a>
+                            <div class="font-alt mb-40 titan-title-size-1">куплю продам обменяю сниму подарю</div><a class="section-scroll btn btn-border-w btn-round" href="#latest">Learn More</a>
                         </div>
                     </div>
                 </li>
