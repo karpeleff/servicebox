@@ -308,7 +308,8 @@
                     <!--                        i.fa.fa-search-->
                     <li class="dropdown"><a class="dropdown-toggle" href="documentation.html" data-toggle="dropdown">контакты</a>
                         <ul class="dropdown-menu">
-                            <li><a href="">Регистрация</a></li>
+                            <li><a href="{{ url('register') }}">Регистрация</a></li>
+                            <li><a href="{{ url('login') }}">Вход</a></li>
                             <li><a href="">Восстановить пароль</a></li>
                             <li><a href="">О сервисе</a></li>
                             <li><a href="">напишите нам</a></li>
