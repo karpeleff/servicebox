@@ -27,12 +27,13 @@ class AdvtController extends Controller
     public function create()
     {
 
-        $i = 0;
+       // $i = 0;
         $cat = Category::all();
        // $data = $cat['name'];
         foreach ($cat as $item) {
-            $data[$i] = $item->name;
-            $i++;
+            //$data[$i] = $item->name;
+            $data[$item->id] = $item->name;
+           // $i++;
         }
 
        // $advert = Advt::all();
@@ -59,7 +60,7 @@ class AdvtController extends Controller
     {
 
         $request->validate([
-            'price' => 'required',
+            'price' => 'required|digits_between:2,5',
             'header' => 'required',
         ]);
 
@@ -81,6 +82,7 @@ class AdvtController extends Controller
             $record = new Advt;
             $record->user_id = Auth::id();
             $record->category_id = $request->category;
+            $record->city = $request->city;
             $record->title = $request->header;
             $record->text  =  $request->text;
             $record->price =$request->price;
@@ -89,7 +91,7 @@ class AdvtController extends Controller
 
 //echo $request->input('text');
            // return "Успех";
-            return   redirect('advt/create');
+            return   redirect('advt/create')->with('success','Обьявление добавлено успешно !');
         }
     }
 

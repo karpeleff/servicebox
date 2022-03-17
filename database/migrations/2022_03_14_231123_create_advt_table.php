@@ -19,6 +19,7 @@ class CreateAdvtTable extends Migration
             $table->foreign('user_id')->references('id')->on('users');
             $table->unsignedBigInteger('category_id');
             $table->foreign('category_id')->references('id')->on('categories');
+            $table->string('city', 100);
             $table->string('title', 100);
             $table->text('text');
             $table->integer('price');
