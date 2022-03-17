@@ -58,12 +58,16 @@
 
                             <div class="col-md-6">
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
+                                <div class="form-check">
+                                    <input class="form-check-input" id="check_reg" type="checkbox" value="" id="flexCheckDefault" />
+                                    <label class="form-check-label" for="flexCheckDefault"><a href="/rules">Согласен с  Правилами  сервиса</a> </label>
+                                </div>
                             </div>
                         </div>
 
                         <div class="row mb-0">
                             <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
+                                <button type="submit" id="button_reg" class="btn btn-primary">
                                     {{ __('Регистрация') }}
                                 </button>
                             </div>
