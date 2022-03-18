@@ -17,15 +17,9 @@ use App\Models\Advt;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('index');
 
-Route::get('/', function () {
-    $advert = Advt::all();
-
-    return view('welcome')->with('advert', $advert);
-
-});
-
-Auth::routes();
+//Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 

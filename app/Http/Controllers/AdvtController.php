@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
+use App\Models\User;
 use Illuminate\Http\Request;
 use App\Models\Advt;
 use Illuminate\Support\Facades\Auth;
@@ -16,7 +17,7 @@ class AdvtController extends Controller
      */
     public function index()
     {
-        //
+
     }
 
     /**
@@ -64,7 +65,6 @@ class AdvtController extends Controller
             'header' => 'required',
         ]);
 
-
            $i = 0;
            $list = [];
            $img;
@@ -75,10 +75,7 @@ class AdvtController extends Controller
                 $list[$i] =  time() . '_' . $f->getClientOriginalName();
               $i++;
             }
-
             $img  = json_encode($list);
-
-
             $record = new Advt;
             $record->user_id = Auth::id();
             $record->category_id = $request->category;
@@ -104,7 +101,11 @@ class AdvtController extends Controller
      */
     public function show($id)
     {
-        //
+        $data = Advt::find($id);
+        $data['tel']  =  Auth::user()->email;
+        // dd($data);
+
+        return view('advt/single_advt')->with('data', $data);
     }
 
     /**

@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
           integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicons/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="16x16" href={{asset("assets/images/favicons/favicon-16x16.png")}}>
 
     <meta name="theme-color" content="#ffffff">
     <!--
@@ -52,7 +52,7 @@
     <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
         <div class="container">
             <div class="navbar-header">
-                <img src="assets/images/favicons/logo.png">
+                <img src= {{asset("assets/images/favicons/logo.png" )}} width="50" height="50">
                 <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#custom-collapse"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="navbar-brand" href="/">service box</a>
             </div>
             <div class="collapse navbar-collapse" id="custom-collapse">
@@ -297,14 +297,24 @@
                         <ul class="dropdown-menu">
                             <li><a href="{{ url('register') }}">Регистрация</a></li>
                             <li><a href="{{ url('login') }}">Вход</a></li>
+                            <li>
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                    @csrf
+                                    <div align="centre"> <button type="submit">exit</button></div>
+
+                                </form>
+                            </li>
+
                             <li><a href="">Восстановить пароль</a></li>
                             <li><a href="">О сервисе</a></li>
                             <li><a href="">напишите нам</a></li>
+                            <li><a href="">{{ Auth::user()->name }}</a></li>
                             <li><a href="{{ url('advt/create ') }}" >создать обьявление</a></li>
                             <li><a href=""></a></li>
                         </ul>
                     </li>
                 </ul>
+
             </div>
         </div>
     </nav>
