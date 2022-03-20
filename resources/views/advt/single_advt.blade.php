@@ -52,7 +52,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-sm-8"><a class="btn btn-lg btn-block btn-round "  href="{{asset("/".$i)}}" >назад  в категорию</a></div>
+                        <div class="col-sm-8"><a class="btn btn-lg btn-block btn-round "  href="{{asset("/")}}" >назад  в категорию</a></div>
                     </div>
                 </div>
                 <div class="row mt-70">
