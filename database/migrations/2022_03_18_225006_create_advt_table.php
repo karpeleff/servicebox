@@ -15,10 +15,8 @@ class CreateAdvtTable extends Migration
     {
         Schema::create('advts', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('user_id');
-            $table->foreign('user_id')->references('id')->on('users');
-            $table->unsignedBigInteger('category_id');
-            $table->foreign('category_id')->references('id')->on('categories');
+            $table->string('category_id',100);
+            $table->string('contact', 100);
             $table->string('city', 100);
             $table->string('title', 100);
             $table->text('text');
@@ -35,6 +33,6 @@ class CreateAdvtTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('advts');
+        Schema::dropIfExists('advt');
     }
 }

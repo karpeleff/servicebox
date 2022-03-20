@@ -77,7 +77,7 @@ class AdvtController extends Controller
             }
             $img  = json_encode($list);
             $record = new Advt;
-            $record->user_id = Auth::id();
+            $record->contact = Auth::user()->email;
             $record->category_id = $request->category;
             $record->city = $request->city;
             $record->title = $request->header;
@@ -102,7 +102,8 @@ class AdvtController extends Controller
     public function show($id)
     {
         $data = Advt::find($id);
-        $data['tel']  =  Auth::user()->email;
+        $data['cat'] = Category::find($data->category_id)->name;
+
         // dd($data);
 
         return view('advt/single_advt')->with('data', $data);

@@ -40,6 +40,7 @@
     <link href="{{ asset('assets/lib/owl.carousel/dist/assets/owl.theme.default.min.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/lib/magnific-popup/dist/magnific-popup.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/lib/simple-text-rotator/simpletextrotator.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/gallery.css') }}" rel="stylesheet">
     <!-- Main stylesheet and color file-->
     <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet">
     <link id="color-scheme" href="{{ asset('assets/css/colors/default.css') }}" rel="stylesheet">
@@ -336,5 +337,6 @@
     <script src="{{ asset('assets/lib/simple-text-rotator/jquery.simple-text-rotator.min.js') }}"></script>
     <script src="{{ asset('assets/js/plugins.js') }}"></script>
     <script src="{{ asset('assets/js/main.js') }}"></script>
+    <script src="{{ asset('assets/js/myscript.js') }}"></script>
 </body>
 </html>
