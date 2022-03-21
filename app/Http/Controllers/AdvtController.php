@@ -159,4 +159,13 @@ class AdvtController extends Controller
         return $this->editPic($path);
 
     }
+    public  function send_message_form()
+    {
+       return view('advt/send_message');
+    }
+
+    public  function send_message()
+    {
+        return   redirect('advt/send_message')->with('success','Обьявление добавлено успешно !');
+    }
 }

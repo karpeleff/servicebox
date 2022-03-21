@@ -3,17 +3,24 @@
     <section class="home-section home-fade home-full-height" id="home">
         <div class="hero-slider">
             <ul class="slides">
-                <li class="bg-dark-30 bg-dark shop-page-header" style="background-image:url(&quot;assets/images/shop/slider1.png&quot;);">
+                <li class="bg-dark-30 bg-dark shop-page-header" style="background-image:url(&quot;assets/images/shop/1.jpg&quot;);">
                     <div class="titan-caption">
                         <div class="caption-content">
-                            <div class="font-alt mb-30 titan-title-size-1">Сервис бесплатных обьявлений</div>
+                            <div class="font-alt mb-30 titan-title-size-1">сервис бесплатных обьявлений</div>
                             <div class="font-alt mb-30 titan-title-size-4">для частных лиц</div>
-                            <div class="font-alt mb-40 titan-title-size-1">куплю продам обменяю сниму подарю</div><a class="section-scroll btn btn-border-w btn-round" href="#latest">регистрация</a>
+                            <!--  <div class="font-alt mb-40 titan-title-size-1">Your online fashion destination</div>
+                           <a class="section-scroll btn btn-border-w btn-round" href="#latest">Learn More</a> -->
                         </div>
                     </div>
                 </li>
-                <li class="bg-dark-30 bg-dark shop-page-header" style="background-image:url(&quot;assets/images/shop/slider3.png&quot;);">
-
+                <li class="bg-dark-30 bg-dark shop-page-header" style="background-image:url(&quot;assets/images/shop/2.jpg&quot;);">
+                    <div class="titan-caption">
+                        <div class="caption-content">
+                            <div class="font-alt mb-30 titan-title-size-2">размещаем бесплатно</div>
+                            <div class="font-alt mb-40 titan-title-size-4">продаем быстро</div>
+                         <!--   <a class="section-scroll btn btn-border-w btn-round" href="#latest">Learn More</a> -->
+                        </div>
+                    </div>
                 </li>
             </ul>
         </div>

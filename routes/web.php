@@ -39,5 +39,6 @@ Route::group(['middleware' => ['auth']], function() {
 Route::get('send-mail', [HomeController::class, 'sendMail']);
 Route::get('test', [AdvtController::class, 'test']);
 
-
+Route::get('send_message', [AdvtController::class, 'send_message_form']);
+Route::post('send_message', [AdvtController::class, 'send_message'])->name('send_message');
 
