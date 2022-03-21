@@ -183,6 +183,10 @@
                     <li class="dropdown"  ><a class="dropdown-toggle"  href="#" data-toggle="dropdown" style="color:red ">экстра инфо</a>
                         <ul class="dropdown-menu" role="menu">
                             <li class="dropdown"><a class="dropdown-toggle" href="tel: +79020648016" data-toggle="dropdown">мчс</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="tel: +79020648016">скорая</a></li>
+                                    <li><a href="tel: +79020648016">пожарная</a></li>
+                                </ul>
                             </li>
                             <li class="dropdown"><a class="dropdown-toggle" href="tel: +79020648016" data-toggle="dropdown">скорая</a>
                             </li>
