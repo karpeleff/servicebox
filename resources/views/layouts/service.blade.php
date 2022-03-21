@@ -180,30 +180,17 @@
                             </li>
                         </ul>
                     </li>
-                    <li class="dropdown"  ><a class="dropdown-toggle"  href="#" data-toggle="dropdown" style="color:red ">экстра инфо</a>
-                        <ul class="dropdown-menu" role="menu">
-                            <li class="dropdown"><a class="dropdown-toggle" href="tel: +79020648016" data-toggle="dropdown">мчс</a>
+
+                    <li class="dropdown"><a class="dropdown-toggle" href="documentation.html" data-toggle="dropdown">контакты</a>
+
+                        <ul class="dropdown-menu">
+                            <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown" style="color:red ">экстра инфо</a>
                                 <ul class="dropdown-menu">
                                     <li><a href="tel: +79020648016">скорая</a></li>
-                                    <li><a href="tel: +79020648016">пожарная</a></li>
+                                    <li><a href="tel: +79020648016">полиция </a></li>
+                                    <li><a href="tel: +79020648016">мчс</a></li>
                                 </ul>
                             </li>
-                            <li class="dropdown"><a class="dropdown-toggle" href="tel: +79020648016" data-toggle="dropdown">скорая</a>
-                            </li>
-                            <li class="dropdown"><a class="dropdown-toggle" href="tel: +79020648016" data-toggle="dropdown">полиция</a>
-                            </li>
-                            <li class="dropdown"><a class="dropdown-toggle" href="tel: +79020648016" data-toggle="dropdown">пожарная служба</a>
-                            </li>
-                            <li class="dropdown"><a class="dropdown-toggle" href="tel: +79020648016" data-toggle="dropdown">антитеррор</a>
-                            </li>
-                            <li class="dropdown"><a class="dropdown-toggle" href="tel:" data-toggle="dropdown">дед мороз</a>
-                            </li>
-                            <li class="dropdown"><a class="dropdown-toggle" href="tel:" data-toggle="dropdown">проститутки</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="dropdown"><a class="dropdown-toggle" href="documentation.html" data-toggle="dropdown">контакты</a>
-                        <ul class="dropdown-menu">
                             <li><a href="{{ url('register') }}">Регистрация</a></li>
                             <li><a href="{{ url('login') }}">Вход</a></li>
                             <li>
