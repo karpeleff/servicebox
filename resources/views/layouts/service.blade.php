@@ -21,9 +21,11 @@
     <meta name="theme-color" content="#ffffff">
     <!--
     Stylesheets
+
     =============================================
 
     -->
+
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <!-- Default stylesheets //   -->
@@ -58,35 +60,28 @@
             </div>
             <div class="collapse navbar-collapse" id="custom-collapse">
                 <ul class="nav navbar-nav navbar-right">
-                    <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Заказы</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="{{ asset('shop/201382216')}}">Верхняя одежда</a></li>
 
-                        </ul>
-                    </li>
 
                     <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Услуги</a>
                         <ul class="dropdown-menu">
-                            <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">ногти</a>
+                            <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">такси</a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="about1.html">About 1</a></li>
-                                    <li><a href="about2.html">About 2</a></li>
-                                    <li><a href="about3.html">About 3</a></li>
-                                    <li><a href="about4.html">About 4</a></li>
-                                    <li><a href="about5.html">About 5</a></li>
+                                    <li><a href="">Такси  Рощино</a></li>
+                                    <li><a href="">Такси Новопокровка</a></li>
+                                    <li><a href="">Такси Дальнереченск</a></li>
                                 </ul>
                             </li>
-                            <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Сервис</a>
+                            <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">ногти</a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="">Такси Эффект</a></li>
-                                    <li><a href="">Автосервис</a></li>
-                                    <li><a href="">Пластиковые окна</a></li>
+                                    <li><a href="">ногти раз</a></li>
+                                    <li><a href=""> ногти два </a></li>
+                                    <li><a href="">ногти три</a></li>
                                 </ul>
                             </li>
                             <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">суши роллы</a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="pricing1.html">Pricing 1</a></li>
-                                    <li><a href="pricing2.html">Pricing 2</a></li>
+                                    <li><a href="pricing1.html">Рощино</a></li>
+                                    <li><a href="pricing2.html">Новопокровка</a></li>
                                 </ul>
                             </li>
                             <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">стрижка укладка</a>
@@ -97,22 +92,14 @@
                                     <li><a href="gallery_col_6.html">6 Columns</a></li>
                                 </ul>
                             </li>
-                            <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Contact</a>
+                            <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">недвижимость</a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="contact1.html">Contact 1</a></li>
-                                    <li><a href="contact2.html">Contact 2</a></li>
-                                    <li><a href="contact3.html">Contact 3</a></li>
+                                    <li><a href="contact1.html">продажа </a></li>
+                                    <li><a href="contact2.html">покупка</a></li>
+                                    <li><a href="contact3.html">аренда</a></li>
                                 </ul>
                             </li>
-                            <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Restaurant menu</a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="restaurant_menu1.html">Menu 2 Columns</a></li>
-                                    <li><a href="restaurant_menu2.html">Menu 3 Columns</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="login_register.html">Login / Register</a></li>
-                            <li><a href="faq.html">FAQ</a></li>
-                            <li><a href="404.html">Page 404</a></li>
+
                         </ul>
                     </li>
                     <li class="dropdown"><a class="dropdown-toggle" href="/notes/05_10" data-toggle="dropdown">Обьявления</a>
@@ -138,14 +125,14 @@
                                     <li><a href="portfolio_full_width_col_4.html">компьютеры</a></li>
                                 </ul>
                             </li>
-                            <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Full Width - Gutter</a>
+                            <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">техника и железо</a>
                                 <ul class="dropdown-menu">
                                     <li><a href="portfolio_full_width_gutter_col_2.html">2 Columns</a></li>
                                     <li><a href="portfolio_full_width_gutter_col_3.html">3 Columns</a></li>
                                     <li><a href="portfolio_full_width_gutter_col_4.html">4 Columns</a></li>
                                 </ul>
                             </li>
-                            <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Masonry</a>
+                            <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">животные</a>
                                 <ul class="dropdown-menu">
                                     <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Boxed</a>
                                         <ul class="dropdown-menu">
@@ -193,107 +180,24 @@
                             </li>
                         </ul>
                     </li>
-                    <!--<li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Blog</a>
+                    <li class="dropdown"  ><a class="dropdown-toggle"  href="#" data-toggle="dropdown" style="color:red ">экстра инфо</a>
                         <ul class="dropdown-menu" role="menu">
-                            <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Standard</a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="blog_standard_left_sidebar.html">Left Sidebar</a></li>
-                                    <li><a href="blog_standard_right_sidebar.html">Right Sidebar</a></li>
-                                </ul>
+                            <li class="dropdown"><a class="dropdown-toggle" href="tel:+79020648016" data-toggle="dropdown">мчс</a>
                             </li>
-                            <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Grid</a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="blog_grid_col_2.html">2 Columns</a></li>
-                                    <li><a href="blog_grid_col_3.html">3 Columns</a></li>
-                                    <li><a href="blog_grid_col_4.html">4 Columns</a></li>
-                                </ul>
+                            <li class="dropdown"><a class="dropdown-toggle" href="tel:+79020648016" data-toggle="dropdown">скорая</a>
                             </li>
-                            <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Masonry</a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="blog_grid_masonry_col_2.html">2 Columns</a></li>
-                                    <li><a href="blog_grid_masonry_col_3.html">3 Columns</a></li>
-                                    <li><a href="blog_grid_masonry_col_4.html">4 Columns</a></li>
-                                </ul>
+                            <li class="dropdown"><a class="dropdown-toggle" href="tel:+79020648016" data-toggle="dropdown">полиция</a>
                             </li>
-                            <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Single</a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="blog_single_left_sidebar.html">Left Sidebar</a></li>
-                                    <li><a href="blog_single_right_sidebar.html">Right Sidebar</a></li>
-                                </ul>
+                            <li class="dropdown"><a class="dropdown-toggle" href="tel:+79020648016" data-toggle="dropdown">пожарная служба</a>
+                            </li>
+                            <li class="dropdown"><a class="dropdown-toggle" href="tel:+79020648016" data-toggle="dropdown">антитеррор</a>
+                            </li>
+                            <li class="dropdown"><a class="dropdown-toggle" href="tel:" data-toggle="dropdown">дед мороз</a>
+                            </li>
+                            <li class="dropdown"><a class="dropdown-toggle" href="tel:" data-toggle="dropdown">проститутки</a>
                             </li>
                         </ul>
                     </li>
-                    <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Features</a>
-                        <ul class="dropdown-menu" role="menu">
-                            <li><a href="alerts-and-wells.html"><i class="fa fa-bolt"></i> Alerts and Wells</a></li>
-                            <li><a href="buttons.html"><i class="fa fa-link fa-sm"></i> Buttons</a></li>
-                            <li><a href="tabs_and_accordions.html"><i class="fa fa-tasks"></i> Tabs &amp; Accordions</a></li>
-                            <li><a href="content_box.html"><i class="fa fa-list-alt"></i> Contents Box</a></li>
-                            <li><a href="forms.html"><i class="fa fa-check-square-o"></i> Forms</a></li>
-                            <li><a href="icons.html"><i class="fa fa-star"></i> Icons</a></li>
-                            <li><a href="progress-bars.html"><i class="fa fa-server"></i> Progress Bars</a></li>
-                            <li><a href="typography.html"><i class="fa fa-font"></i> Typography</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Shop</a>
-                        <ul class="dropdown-menu" role="menu">
-                            <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Product</a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="shop_product_col_3.html">3 columns</a></li>
-                                    <li><a href="shop_product_col_4.html">4 columns</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="shop_single_product.html">Single Product</a></li>
-                            <li><a href="shop_checkout.html">Checkout</a></li>
-                        </ul>
-                    </li>-->
-                    <!--li.dropdown.navbar-cart-->
-                    <!--    a.dropdown-toggle(href='#', data-toggle='dropdown')-->
-                    <!--        span.icon-basket-->
-                    <!--        |-->
-                    <!--        span.cart-item-number 2-->
-                    <!--    ul.dropdown-menu.cart-list(role='menu')-->
-                    <!--        li-->
-                    <!--            .navbar-cart-item.clearfix-->
-                    <!--                .navbar-cart-img-->
-                    <!--                    a(href='#')-->
-                    <!--                        img(src='assets/images/shop/product-9.jpg', alt='')-->
-                    <!--                .navbar-cart-title-->
-                    <!--                    a(href='#') Short striped sweater-->
-                    <!--                    |-->
-                    <!--                    span.cart-amount 2 &times; $119.00-->
-                    <!--                    br-->
-                    <!--                    |-->
-                    <!--                    strong.cart-amount $238.00-->
-                    <!--        li-->
-                    <!--            .navbar-cart-item.clearfix-->
-                    <!--                .navbar-cart-img-->
-                    <!--                    a(href='#')-->
-                    <!--                        img(src='assets/images/shop/product-10.jpg', alt='')-->
-                    <!--                .navbar-cart-title-->
-                    <!--                    a(href='#') Colored jewel rings-->
-                    <!--                    |-->
-                    <!--                    span.cart-amount 2 &times; $119.00-->
-                    <!--                    br-->
-                    <!--                    |-->
-                    <!--                    strong.cart-amount $238.00-->
-                    <!--        li-->
-                    <!--            .clearfix-->
-                    <!--                .cart-sub-totle-->
-                    <!--                    strong Total: $476.00-->
-                    <!--        li-->
-                    <!--            .clearfix-->
-                    <!--                a.btn.btn-block.btn-round.btn-font-w(type='submit') Checkout-->
-                    <!--li.dropdown-->
-                    <!--    a.dropdown-toggle(href='#', data-toggle='dropdown') Search-->
-                    <!--    ul.dropdown-menu(role='menu')-->
-                    <!--        li-->
-                    <!--            .dropdown-search-->
-                    <!--                form(role='form')-->
-                    <!--                    input.form-control(type='text', placeholder='Search...')-->
-                    <!--                    |-->
-                    <!--                    button.search-btn(type='submit')-->
-                    <!--                        i.fa.fa-search-->
                     <li class="dropdown"><a class="dropdown-toggle" href="documentation.html" data-toggle="dropdown">контакты</a>
                         <ul class="dropdown-menu">
                             <li><a href="{{ url('register') }}">Регистрация</a></li>

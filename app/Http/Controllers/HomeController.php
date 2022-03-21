@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Jobs\SendMailJob;
 use App\Models\Advt;
 use Illuminate\Http\Request;
 
@@ -28,5 +29,18 @@ class HomeController extends Controller
        // dd($data);
 
         return view('welcome')->with('data', $data);
+    }
+
+
+    public  function sendMail()
+    {
+        $details['to'] = 'alexey.karpelev@yandex.ru';
+        $details['name'] = 'Receiver Name';
+        $details['subject'] = 'Hello Laravelcode';
+        $details['message'] = 'Here goes all message body.';
+
+        SendMailJob::dispatch($details);
+
+        return response('Email sent successfully');
     }
 }

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\UserController;
@@ -33,6 +34,10 @@ Route::group(['middleware' => ['auth']], function() {
     Route::resource('products', ProductController::class);
     Route::resource('advt', AdvtController::class);
 });
+
+
+Route::get('send-mail', [HomeController::class, 'sendMail']);
+Route::get('test', [AdvtController::class, 'test']);
 
 
 

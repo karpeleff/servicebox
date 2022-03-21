@@ -8,7 +8,7 @@
         <section class="module">
             <div class="container">
                 <div class="row">
-                    <div class="col-sm-6 mb-sm-40"><a class="gallery" href="{{asset("storage/".$img[0])}}"><img src="{{asset("storage/".$img[0])}}" alt="S"  id="largeImg"  /></a>
+                    <div class="col-sm-6 mb-sm-40"><a class="gallery" href="{{asset("storage/".$img[0])}}"><img src="{{asset("storage/".$img[0])}}" alt=""  id="largeImg"  /></a>
                         <ul class="product-gallery"  id="thumbs" >
                             @if (count($img) > 1)
                                 @foreach ($img as $i)
@@ -25,8 +25,7 @@
                             </div>
                         </div>
                         <div class="row mb-20">
-                            <div class="col-sm-12"><span><i class="fa fa-star star"></i></span><span><i class="fa fa-star star"></i></span><span><i class="fa fa-star star"></i></span><span><i class="fa fa-star star"></i></span><span><i class="fa fa-star star-off"></i></span><a class="open-tab section-scroll" href="#reviews">-2customer reviews</a>
-                            </div>
+
                         </div>
                         <div class="row mb-20">
                             <div class="col-sm-12">
@@ -34,25 +33,33 @@
                             </div>
                         </div>
                         <div class="row mb-20">
+                            <div class="col-sm-12">Контактный телефон: {{$data->contact}}
+
+                            </div>
+                            <div class="col-sm-12">
+                                <div class="product_meta">Категория: <a href="#"> {{$data->cat}}</a></div>
+                            </div>
                             <div class="col-sm-12">
                                 <div class="description">
-                                    <p>{{$data->text}}.</p>
+                                    <p>Описание: {{$data->text}}.</p>
                                 </div>
                             </div>
                         </div>
                         <div class="row mb-20">
+                            <div class="row mb-20">
+
+                            </div>
                            <!-- <div class="col-sm-4 mb-sm-20">
                                 <input class="form-control input-lg" type="number" name="" value="1" max="40" min="1" required="required"/>
                             </div>  -->
                             <div class="col-sm-8"><a class="btn btn-lg btn-block btn-round btn-b"   href="tel:{{$data->contact}}" >позвонить</a></div>
+                            <br><br><br><br>
+                            <div class="col-sm-8"><a class="btn  btn-lg btn-round btn-block btn-round btn-b "  href="{{asset("/")}}" >назад  в категорию</a></div>
                         </div>
                         <div class="row mb-20">
-                            <div class="col-sm-12">
-                                <div class="product_meta">Категория: <a href="#"> {{$data->cat}}</a>
-                                </div>
-                            </div>
+
                         </div>
-                        <div class="col-sm-8"><a class="btn btn-lg btn-block btn-round "  href="{{asset("/")}}" >назад  в категорию</a></div>
+
                     </div>
                 </div>
                 <div class="row mt-70">

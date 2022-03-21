@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Jobs\EditPicJob;
 use App\Models\Category;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -141,5 +142,21 @@ class AdvtController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function editPic($data)
+    {
+        EditPicJob::dispatch($data);
+    }
+
+    public function test()
+    {
+       // echo 'test';
+        $path = 'C:\OServer\domains\servicebox.loc\storage\app\public\magnezis.jpg';
+       // echo $path;
+       // die();
+
+        return $this->editPic($path);
+
     }
 }
