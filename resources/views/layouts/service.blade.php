@@ -182,15 +182,15 @@
                     </li>
                     <li class="dropdown"  ><a class="dropdown-toggle"  href="#" data-toggle="dropdown" style="color:red ">экстра инфо</a>
                         <ul class="dropdown-menu" role="menu">
-                            <li class="dropdown"><a class="dropdown-toggle" href="tel:+79020648016" data-toggle="dropdown">мчс</a>
+                            <li class="dropdown"><a class="dropdown-toggle" href="tel: +79020648016" data-toggle="dropdown">мчс</a>
                             </li>
-                            <li class="dropdown"><a class="dropdown-toggle" href="tel:+79020648016" data-toggle="dropdown">скорая</a>
+                            <li class="dropdown"><a class="dropdown-toggle" href="tel: +79020648016" data-toggle="dropdown">скорая</a>
                             </li>
-                            <li class="dropdown"><a class="dropdown-toggle" href="tel:+79020648016" data-toggle="dropdown">полиция</a>
+                            <li class="dropdown"><a class="dropdown-toggle" href="tel: +79020648016" data-toggle="dropdown">полиция</a>
                             </li>
-                            <li class="dropdown"><a class="dropdown-toggle" href="tel:+79020648016" data-toggle="dropdown">пожарная служба</a>
+                            <li class="dropdown"><a class="dropdown-toggle" href="tel: +79020648016" data-toggle="dropdown">пожарная служба</a>
                             </li>
-                            <li class="dropdown"><a class="dropdown-toggle" href="tel:+79020648016" data-toggle="dropdown">антитеррор</a>
+                            <li class="dropdown"><a class="dropdown-toggle" href="tel: +79020648016" data-toggle="dropdown">антитеррор</a>
                             </li>
                             <li class="dropdown"><a class="dropdown-toggle" href="tel:" data-toggle="dropdown">дед мороз</a>
                             </li>
