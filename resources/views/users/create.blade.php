@@ -1,19 +1,19 @@
-@extends('layouts.app')
+@extends('layouts.admin')
 
 
 @section('content')
 
-    <div class="container">
-        <div class="row justify-content-center">
+    <div class="container ">
+        <div class="row justify-content-center ">
             <div class="col-md-8">
-                <div class="card">
+                <div class="card p-4 ">
 
                     <div class="row">
                         <div class="col-lg-12 margin-tb">
                             <div class="pull-left">
                                 <h2>Create New User</h2>
                             </div>
-                            <div class="pull-right">
+                            <div class="pull-right pb-4 ">
                                 <a class="btn btn-primary" href="{{ route('users.index') }}"> Back</a>
                             </div>
                         </div>
@@ -65,7 +65,7 @@
                                 {!! Form::select('roles[]', $roles,[], array('class' => 'form-control','multiple')) !!}
                             </div>
                         </div>
-                        <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+                        <div class="col-xs-12 col-sm-12 col-md-12 text-center pb-3 pt-3 ">
                             <button type="submit" class="btn btn-primary">Submit</button>
                         </div>
                     </div>

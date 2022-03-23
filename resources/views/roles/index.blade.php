@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.admin')
 
 
 @section('content')
@@ -10,11 +10,11 @@
                 <div class="row">
                     <div class="col-lg-12 margin-tb">
                         <div class="pull-left">
-                            <h2>Role Management</h2>
+                            <h2>Упрвление ролями</h2>
                         </div>
                         <div class="pull-right">
                             @can('role-create')
-                                <a class="btn btn-success" href="{{ route('roles.create') }}"> Create New Role</a>
+                                <a class="btn btn-success mb-3" href="{{ route('roles.create') }}"> Create New Role</a>
                             @endcan
                         </div>
                     </div>
@@ -56,8 +56,6 @@
 
                 {!! $roles->render() !!}
 
-
-                <p class="text-center text-primary"><small>Tutorial by ItSolutionStuff.com</small></p>
 
             </div>
         </div>

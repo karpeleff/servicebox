@@ -204,7 +204,8 @@
                             <li><a href="">Восстановить пароль</a></li>
                             <li><a href="">О сервисе</a></li>
                             <li><a href="{{'/send_message'}}">напишите нам</a></li>
-                            <li><a href="">{{ Auth::user()->name }}</a></li>
+                            <li><a href="">{{ Auth::user() ? Auth::user()->name : 'guest' }}</a></li>
+
                             <li><a href="{{ url('advt/create ') }}" >создать обьявление</a></li>
                             <li><a href=""></a></li>
                         </ul>

@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.admin')
 
 
 @section('content')
@@ -7,14 +7,13 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    <div class="card-header">{{ __('Dashboard') }}</div>
                     <div class="row">
-                        <div class="col-lg-12 margin-tb">
-                            <div class="pull-left">
+                        <div class="col-lg-12  p-4 ">
+                            <div class="pull-left  ">
                                 <h2>Create New Role</h2>
                             </div>
                             <div class="pull-right">
-                                <a class="btn btn-primary" href="{{ route('roles.index') }}"> Back</a>
+                                <a class="btn btn-primary " href="{{ route('roles.index') }}"> Back</a>
                             </div>
                         </div>
                     </div>
@@ -35,13 +34,13 @@
                     {!! Form::open(array('route' => 'roles.store','method'=>'POST')) !!}
                     <div class="row">
                         <div class="col-xs-12 col-sm-12 col-md-12">
-                            <div class="form-group">
+                            <div class="form-group p-3">
                                 <strong>Name:</strong>
-                                {!! Form::text('name', null, array('placeholder' => 'Name','class' => 'form-control')) !!}
+                                {!! Form::text('name', null, array('placeholder' => 'Name','class' => 'form-control ')) !!}
                             </div>
                         </div>
                         <div class="col-xs-12 col-sm-12 col-md-12">
-                            <div class="form-group">
+                            <div class="form-group p-3">
                                 <strong>Permission:</strong>
                                 <br/>
                                 @foreach($permission as $value)

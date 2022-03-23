@@ -141,7 +141,9 @@ class AdvtController extends Controller
      */
     public function destroy($id)
     {
-        //
+
+
+
     }
 
     public function editPic($data)

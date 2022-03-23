@@ -15,7 +15,8 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+       // $this->middleware('auth');
+      $this->middleware('permission:dashboard work', ['only' => ['home']]);
     }
 
     /**
@@ -29,6 +30,12 @@ class HomeController extends Controller
        // dd($data);
 
         return view('welcome')->with('data', $data);
+    }
+
+
+    public function home()
+    {
+        return view('home');
     }
 
 

@@ -22,7 +22,7 @@ Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('in
 
 //Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'home'])->name('home');
 
 Auth::routes();
 
@@ -31,14 +31,13 @@ Auth::routes();
 Route::group(['middleware' => ['auth']], function() {
     Route::resource('roles', RoleController::class);
     Route::resource('users', UserController::class);
-    Route::resource('products', ProductController::class);
     Route::resource('advt', AdvtController::class);
 });
 
 
-Route::get('send-mail', [HomeController::class, 'sendMail']);
-Route::get('test', [AdvtController::class, 'test']);
+//Route::get('send-mail', [HomeController::class, 'sendMail']);
+//Route::get('test', [AdvtController::class, 'test']);
 
-Route::get('send_message', [AdvtController::class, 'send_message_form']);
-Route::post('send_message', [AdvtController::class, 'send_message'])->name('send_message');
+//Route::get('send_message', [AdvtController::class, 'send_message_form']);
+//Route::post('send_message', [AdvtController::class, 'send_message'])->name('send_message');
 
