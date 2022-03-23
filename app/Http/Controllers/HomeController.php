@@ -16,7 +16,9 @@ class HomeController extends Controller
     public function __construct()
     {
        // $this->middleware('auth');
-      $this->middleware('permission:dashboard work', ['only' => ['home']]);
+     // $this->middleware('permission:role-dash-work', ['only' => ['destroy']]);
+       // $this->middleware(['role:super-admin','permission:publish articles|edit articles']);
+        $this->middleware(['role:dash|Admin']);
     }
 
     /**

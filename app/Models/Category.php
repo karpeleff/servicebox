@@ -10,7 +10,10 @@ class Category extends Model
 {
     use HasFactory;
     use FormAccessible;
+    protected $fillable = [
+        'name',
 
+    ];
 
 
 }

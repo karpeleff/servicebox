@@ -8,6 +8,7 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use App\Models\Advt;
 use Illuminate\Support\Facades\Auth;
+use Spatie\Permission\Models\Role;
 
 class AdvtController extends Controller
 {
@@ -170,4 +171,25 @@ class AdvtController extends Controller
     {
         return   redirect('advt/send_message')->with('success','Обьявление добавлено успешно !');
     }
+
+    public function cat_form()
+    {
+        return view('admin.category_create');
+    }
+
+
+    public function add_cat(Request $request)
+    {
+        $this->validate($request, [
+            'name' => 'required|unique:categories,name',
+
+        ]);
+
+        $role = Category::create(['name' => $request->input('name')]);
+
+        return view('admin.category_create')->with('success','Category created successfully');
+
+    }
+
+
 }

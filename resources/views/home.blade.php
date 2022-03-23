@@ -24,6 +24,12 @@
                             </li>
                         </ul>
 
+                        @role('Admin')
+                        I am a admin!
+                        @else
+                            I am not a admin...
+                            @endrole
+
                 </div>
             </div>
         </div>

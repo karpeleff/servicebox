@@ -4,7 +4,7 @@ use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\UserController;
-use App\Http\Controllers\ProductController;
+
 use App\Http\Controllers\AdvtController;
 use App\Models\Advt;
 
@@ -18,11 +18,11 @@ use App\Models\Advt;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('index');
+//Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('index');
 
 //Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'home'])->name('home');
+
 
 Auth::routes();
 
@@ -32,6 +32,8 @@ Route::group(['middleware' => ['auth']], function() {
     Route::resource('roles', RoleController::class);
     Route::resource('users', UserController::class);
     Route::resource('advt', AdvtController::class);
+    Route::get('/home', [App\Http\Controllers\HomeController::class, 'home'])->name('home');
+    Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('index');
 });
 
 
@@ -40,4 +42,9 @@ Route::group(['middleware' => ['auth']], function() {
 
 //Route::get('send_message', [AdvtController::class, 'send_message_form']);
 //Route::post('send_message', [AdvtController::class, 'send_message'])->name('send_message');
+
+
+Route::get('/cat_form',[App\Http\Controllers\AdvtController::class,'cat_form'])->name('cat_form');
+Route::post('/add_cat',[App\Http\Controllers\AdvtController::class,'add_cat'])->name('add_cat');
+
 

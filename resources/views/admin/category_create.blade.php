@@ -1,3 +1,4 @@
+
 @extends('layouts.admin')
 
 
@@ -10,22 +11,13 @@
                     <div class="row">
                         <div class="col-lg-12  p-4 ">
                             <div class="pull-left  ">
-                                <h2>Create New Role</h2>
+                                <h2>Create New Category</h2>
                             </div>
                             <div class="pull-right">
-                                <a class="btn btn-primary " href="{{ route('roles.index') }}"> Back</a>
+
                             </div>
                         </div>
                     </div>
-
-                    <!-- если успех -->
-                    @if ($message = Session::get('success'))
-                        <div class="alert alert-success">
-                            <p>{{ $message }}</p>
-                        </div>
-
-                    @endif
-
 
                     @if (count($errors) > 0)
                         <div class="alert alert-danger">
@@ -39,7 +31,7 @@
                     @endif
 
 
-                    {!! Form::open(array('route' => 'roles.store','method'=>'POST')) !!}
+                    {!! Form::open(array('route' => 'add_cat','method'=>'POST')) !!}
                     <div class="row">
                         <div class="col-xs-12 col-sm-12 col-md-12">
                             <div class="form-group p-3">
@@ -48,15 +40,7 @@
                             </div>
                         </div>
                         <div class="col-xs-12 col-sm-12 col-md-12">
-                            <div class="form-group p-3">
-                                <strong>Permission:</strong>
-                                <br/>
-                                @foreach($permission as $value)
-                                    <label>{{ Form::checkbox('permission[]', $value->id, false, array('class' => 'name')) }}
-                                        {{ $value->name }}</label>
-                                    <br/>
-                                @endforeach
-                            </div>
+
                         </div>
                         <div class="col-xs-12 col-sm-12 col-md-12 text-center">
                             <button type="submit" class="btn btn-primary">Submit</button>

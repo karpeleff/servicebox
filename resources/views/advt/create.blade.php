@@ -6,10 +6,10 @@
 
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-md-8">
-                <div class="card">
+            <div class="col-md-8 "  >
+                <div class="card p-4 ">
                     <div class="row">
-                        <div class="col-lg-12 margin-tb">
+                        <div class="col-lg-12">
                             <div class="pull-left">
                                 <!-- если успех -->
                                 @if ($message = Session::get('success'))
@@ -55,14 +55,15 @@
                     {!!Form::open(['route' => 'advt.store', 'files' => true,'method'=>'POST'])!!}
                     {!!Form::text('header',null,['class' => 'form-control','placeholder' => 'заголовок']);!!}
                     <br><br>
-                    {!! Form::textarea('text'); !!}
+                    {!!Form::textarea('text',null,['class' => 'form-control','placeholder' => 'текст']);!!}
                     <br><br>
                     {!!Form::text('price',null,['class' => 'form-control','placeholder' => 'цена']);!!}
                     <br><br>
-                    {!!Form::select('city', ['поселок'=> $city], '1');!!}
-                    <br><br>
 
-                    {!! Form::select('category', array('Категории' => $data ), null) !!}
+                    {!! Form::select('city', $city, null, ['class' => 'form-control']) !!}
+                    <br><br>
+                    {!! Form::select('category', $data, null, ['class' => 'form-control']) !!}
+
 
                     <br><br>
                     {!! Form::file('file[]', ['multiple' => true]) !!}

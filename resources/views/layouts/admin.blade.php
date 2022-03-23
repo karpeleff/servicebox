@@ -46,8 +46,10 @@
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ms-auto">
+                        <li><a class="nav-link" href="{{ route('home') }}">Dashboard</a></li>
                         <li><a class="nav-link" href="{{ route('users.index') }}">Manage Users</a></li>
                         <li><a class="nav-link" href="{{ route('roles.index') }}">Manage Role</a></li>
+                        <li><a class="nav-link" href="{{ route('cat_form') }}">Add Category</a></li>
                         <!-- Authentication Links -->
                         @guest
                             @if (Route::has('login'))
