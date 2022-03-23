@@ -18,7 +18,7 @@ class HomeController extends Controller
        // $this->middleware('auth');
      // $this->middleware('permission:role-dash-work', ['only' => ['destroy']]);
        // $this->middleware(['role:super-admin','permission:publish articles|edit articles']);
-        $this->middleware(['role:dash|Admin']);
+       // $this->middleware(['role:dash|Admin']);
     }
 
     /**
