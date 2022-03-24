@@ -52,4 +52,9 @@ class HomeController extends Controller
 
         return response('Email sent successfully');
     }
+
+    public function about()
+    {
+        return view('advt.about');
+    }
 }

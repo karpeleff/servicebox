@@ -61,49 +61,9 @@
             <div class="collapse navbar-collapse" id="custom-collapse">
                 <ul class="nav navbar-nav navbar-right">
 
-
-                    <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Услуги</a>
-                        <ul class="dropdown-menu">
-                            <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">такси</a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="">Такси  Рощино</a></li>
-                                    <li><a href="">Такси Новопокровка</a></li>
-                                    <li><a href="">Такси Дальнереченск</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">ногти</a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="">ногти раз</a></li>
-                                    <li><a href=""> ногти два </a></li>
-                                    <li><a href="">ногти три</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">суши роллы</a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="pricing1.html">Рощино</a></li>
-                                    <li><a href="pricing2.html">Новопокровка</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">стрижка укладка</a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="gallery_col_2.html">2 Columns</a></li>
-                                    <li><a href="gallery_col_3.html">3 Columns</a></li>
-                                    <li><a href="gallery_col_4.html">4 Columns</a></li>
-                                    <li><a href="gallery_col_6.html">6 Columns</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">недвижимость</a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="contact1.html">продажа </a></li>
-                                    <li><a href="contact2.html">покупка</a></li>
-                                    <li><a href="contact3.html">аренда</a></li>
-                                </ul>
-                            </li>
-
-                        </ul>
-                    </li>
                     <li class="dropdown"><a class="dropdown-toggle" href="/notes/05_10" data-toggle="dropdown">Обьявления</a>
                         <ul class="dropdown-menu" role="menu">
+                            <li><a href="{{ url('advt/create ') }}" >создать обьявление</a></li>
                             <li class="dropdown"><a class="dropdown-toggle" href="05" data-toggle="dropdown">Авто</a>
                                 <ul class="dropdown-menu">
                                     <li><a href="/notes/05_10">Продам авто </a></li>
@@ -180,7 +140,46 @@
                             </li>
                         </ul>
                     </li>
+                    <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Услуги</a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">такси</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="">Такси  Рощино</a></li>
+                                    <li><a href="">Такси Новопокровка</a></li>
+                                    <li><a href="">Такси Дальнереченск</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">ногти</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="">ногти раз</a></li>
+                                    <li><a href=""> ногти два </a></li>
+                                    <li><a href="">ногти три</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">суши роллы</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="pricing1.html">Рощино</a></li>
+                                    <li><a href="pricing2.html">Новопокровка</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">стрижка укладка</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="gallery_col_2.html">2 Columns</a></li>
+                                    <li><a href="gallery_col_3.html">3 Columns</a></li>
+                                    <li><a href="gallery_col_4.html">4 Columns</a></li>
+                                    <li><a href="gallery_col_6.html">6 Columns</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">недвижимость</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="contact1.html">продажа </a></li>
+                                    <li><a href="contact2.html">покупка</a></li>
+                                    <li><a href="contact3.html">аренда</a></li>
+                                </ul>
+                            </li>
 
+                        </ul>
+                    </li>
                     <li class="dropdown"><a class="dropdown-toggle" href="documentation.html" data-toggle="dropdown">контакты</a>
 
                         <ul class="dropdown-menu">
@@ -191,25 +190,28 @@
                                     <li><a href="tel: +79020648016">мчс</a></li>
                                 </ul>
                             </li>
-                            <li><a href="{{ url('register') }}">Регистрация</a></li>
-                            <li><a href="{{ url('login') }}">Вход</a></li>
-                            <li>
-                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                    @csrf
-                                    <div> <button type="submit">exit</button></div>
+                            <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown" >вы вошли как: {{ Auth::user() ? Auth::user()->name : 'guest' }}</a>
 
-                                </form>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="{{ route('logout') }}"
+                                           onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                            {{ __('выйти') }}
+                                        </a></li>
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                        @csrf
+                                    </form>
+                                </ul>
                             </li>
 
                             <li><a href="">Восстановить пароль</a></li>
-                            <li><a href="">О сервисе</a></li>
+                            <li><a href="{{'/about'}}">О сервисе</a></li>
                             <li><a href="{{'/send_message'}}">напишите нам</a></li>
-                            <li><a href="">{{ Auth::user() ? Auth::user()->name : 'guest' }}</a></li>
 
-                            <li><a href="{{ url('advt/create ') }}" >создать обьявление</a></li>
-                            <li><a href=""></a></li>
+
                         </ul>
                     </li>
+
                 </ul>
 
             </div>

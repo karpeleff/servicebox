@@ -46,27 +46,35 @@
                             </div>
                         </div>
                         <div class="row mb-20">
-                            <div class="row mb-20">
+
 
                             </div>
                            <!-- <div class="col-sm-4 mb-sm-20">
                                 <input class="form-control input-lg" type="number" name="" value="1" max="40" min="1" required="required"/>
                             </div>  -->
-                            <div class="col-sm-8"><a class="btn btn-lg btn-block btn-round btn-b"   href="tel:{{$data->contact}}" >позвонить</a></div>
-                            <br><br><br><br>
+                            <div class="col-sm-8 "><a class="btn btn-lg btn-block btn-round btn-b  "   href="tel:{{$data->contact}}" >позвонить</a></div>
+<br><br><br>
                             <div class="col-sm-8"><a class="btn  btn-lg btn-round btn-block btn-round btn-b "  href="{{asset("/")}}" >назад  в категорию</a></div>
+
+                            @if ($data->contact === Auth::user()->email)
+                            <br><br><br>
+                            <div class="col-sm-8">
+                                <form method="post" action="{{$data->id}}">
+                                    @csrf
+                                    @method('DELETE')
+
+                                    <button type="submit"  class="btn btn-default" >удалить обьявление</button>
+                                </form>
+                            </div>
+                            @endif
                         </div>
-                        <div class="row mb-20">
-                            <form method="post" action="{{$data->id}}">
-                                @csrf
-                                @method('DELETE')
 
-                                <button type="submit"  class="btn btn-block" >удалить</button>
-                            </form>
+
+
 
                         </div>
 
-                    </div>
+
                 </div>
                 <div class="row mt-70">
 

@@ -34,6 +34,7 @@ Route::group(['middleware' => ['auth']], function() {
     Route::resource('advt', AdvtController::class);
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'home'])->name('home');
     Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('index');
+    Route::get('/about', [App\Http\Controllers\HomeController::class, 'about'])->name('about');
 });
 
 
