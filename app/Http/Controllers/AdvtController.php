@@ -55,7 +55,7 @@ class AdvtController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'price' => 'required|digits_between:2,5',
+            'price' => 'required|digits_between:2,6',
             'header' => 'required',
         ]);
 
