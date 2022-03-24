@@ -21,7 +21,7 @@
                 </div>
                 <div class="row">
                     <div class="col-sm-6 col-sm-offset-3">
-                        <form  role="form" method="post" action="{{'send_message'}}">
+                        <form  role="form" method="post" action="{{ route('send_message') }}">
                             @csrf
                             <div class="form-group">
                                 <textarea class="form-control" rows="7"  name="message" placeholder="текст сообщениея" required></textarea>

@@ -5,9 +5,12 @@ namespace App\Http\Controllers;
 use App\Jobs\EditPicJob;
 use App\Models\Category;
 use App\Models\User;
+use App\Models\UserMessage;
 use Illuminate\Http\Request;
 use App\Models\Advt;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Storage;
 use Spatie\Permission\Models\Role;
 
 class AdvtController extends Controller
@@ -29,7 +32,6 @@ class AdvtController extends Controller
      */
     public function create()
     {
-
        // $i = 0;
         $cat = Category::all();
        // $data = $cat['name'];
@@ -38,9 +40,7 @@ class AdvtController extends Controller
             $data[$item->id] = $item->name;
            // $i++;
         }
-
        // $advert = Advt::all();
-
 
         return view('advt.create',compact('data'));
     }
@@ -51,17 +51,9 @@ class AdvtController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store2(Request $request)
-    {
-        dd($request);
-    }
-
-
-
 
     public function store(Request $request)
     {
-
         $request->validate([
             'price' => 'required|digits_between:2,5',
             'header' => 'required',
@@ -142,8 +134,23 @@ class AdvtController extends Controller
      */
     public function destroy($id)
     {
+        //$advt = Advt::where('id', $id)->get();
+        $advt = DB::table('advts')->where('id', $id)->first();
 
+       // dd($advt);
+        $img = $advt->img;
 
+        $advt = DB::table('advts')->where('id', $id)->delete();
+
+$out = [];
+
+$out = json_decode($img, true);
+
+        Storage::delete($out);
+
+die();
+
+        return redirect('/');
 
     }
 
@@ -155,11 +162,12 @@ class AdvtController extends Controller
     public function test()
     {
        // echo 'test';
-        $path = 'C:\OServer\domains\servicebox.loc\storage\app\public\magnezis.jpg';
+       // $path = 'C:\OServer\domains\servicebox.loc\storage\app\public\magnezis.jpg';
        // echo $path;
-       // die();
+       // die();    1648046441_Image-05.jpg
 
-        return $this->editPic($path);
+       // return $this->editPic($path);
+        Storage::delete('1648046441_Image-05.jpg');
 
     }
     public  function send_message_form()
@@ -167,9 +175,17 @@ class AdvtController extends Controller
        return view('advt/send_message');
     }
 
-    public  function send_message()
+    public  function send_message(Request $request)
     {
-        return   redirect('advt/send_message')->with('success','Обьявление добавлено успешно !');
+
+        $record = new UserMessage();
+        $record->user = Auth::user()->email;
+        $record->message = $request->message;
+        $record->save();
+
+
+
+        return   redirect('send_message')->with('success','Сообщение отправлено !');
     }
 
     public function cat_form()
@@ -177,15 +193,12 @@ class AdvtController extends Controller
         return view('admin.category_create');
     }
 
-
     public function add_cat(Request $request)
     {
         $this->validate($request, [
             'name' => 'required|unique:categories,name',
-
         ]);
-
-        $role = Category::create(['name' => $request->input('name')]);
+         Category::create(['name' => $request->input('name')]);
 
         return view('admin.category_create')->with('success','Category created successfully');
 

@@ -59,17 +59,20 @@
                     <br><br>
                     {!!Form::text('price',null,['class' => 'form-control','placeholder' => 'цена']);!!}
                     <br><br>
-
+                     {!! Form::label('email', 'Населенный пункт', array('class' => 'awesome')); !!}
                     {!! Form::select('city', $city, null, ['class' => 'form-control']) !!}
                     <br><br>
+                    {!! Form::label('email', 'Категория', array('class' => 'awesome')); !!}
                     {!! Form::select('category', $data, null, ['class' => 'form-control']) !!}
 
 
                     <br><br>
+                    {!! Form::label('email', 'Выбрать фото(макс. 5)', array('class' => 'awesome')); !!}
+                    <br><br>
                     {!! Form::file('file[]', ['multiple' => true]) !!}
                     <br><br>
+                    {{Form::submit('Сохранить', ['class' => 'btn btn-large btn-primary openbutton'])}}
 
-                    {!! Form::submit('сохранить!'); !!}
 
                     {!! Form::close() !!}
 

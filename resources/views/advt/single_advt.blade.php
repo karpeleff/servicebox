@@ -57,6 +57,12 @@
                             <div class="col-sm-8"><a class="btn  btn-lg btn-round btn-block btn-round btn-b "  href="{{asset("/")}}" >назад  в категорию</a></div>
                         </div>
                         <div class="row mb-20">
+                            <form method="post" action="{{$data->id}}">
+                                @csrf
+                                @method('DELETE')
+
+                                <button type="submit"  class="btn btn-block" >удалить</button>
+                            </form>
 
                         </div>
 

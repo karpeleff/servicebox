@@ -38,10 +38,10 @@ Route::group(['middleware' => ['auth']], function() {
 
 
 //Route::get('send-mail', [HomeController::class, 'sendMail']);
-//Route::get('test', [AdvtController::class, 'test']);
+Route::get('test', [AdvtController::class, 'test']);
 
-//Route::get('send_message', [AdvtController::class, 'send_message_form']);
-//Route::post('send_message', [AdvtController::class, 'send_message'])->name('send_message');
+Route::get('send_message', [AdvtController::class, 'send_message_form'])->name('send_message_form');
+Route::post('send_message', [AdvtController::class, 'send_message'])->name('send_message');
 
 
 Route::get('/cat_form',[App\Http\Controllers\AdvtController::class,'cat_form'])->name('cat_form');

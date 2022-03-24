@@ -6,19 +6,19 @@
                 <li class="bg-dark-30 bg-dark shop-page-header" style="background-image:url(&quot;assets/images/shop/1.jpg&quot;);">
                     <div class="titan-caption">
                         <div class="caption-content">
-                            <div class="font-alt mb-30 titan-title-size-1">сервис бесплатных обьявлений</div>
+                            <div class="font-alt mb-30 titan-title-size-3"   >сервис бесплатных обьявлений</div>
                             <div class="font-alt mb-30 titan-title-size-4">для частных лиц</div>
-                            <!--  <div class="font-alt mb-40 titan-title-size-1">Your online fashion destination</div>
-                           <a class="section-scroll btn btn-border-w btn-round" href="#latest">Learn More</a> -->
+                            <!--  <div class="font-alt mb-40 titan-title-size-1">Your online fashion destination</div>-->
+                           <a class="section-scroll btn btn-border-w btn-round" href="{{ url('advt/create ') }}">создать обьявление</a>
                         </div>
                     </div>
                 </li>
                 <li class="bg-dark-30 bg-dark shop-page-header" style="background-image:url(&quot;assets/images/shop/2.jpg&quot;);">
                     <div class="titan-caption">
                         <div class="caption-content">
-                            <div class="font-alt mb-30 titan-title-size-2">размещаем бесплатно</div>
+                            <div class="font-alt mb-30 titan-title-size-4" style="color:#007bff " >размещаем бесплатно</div>
                             <div class="font-alt mb-40 titan-title-size-4">продаем быстро</div>
-                         <!--   <a class="section-scroll btn btn-border-w btn-round" href="#latest">Learn More</a> -->
+                         <a class="section-scroll btn btn-border-w btn-round" href="{{ url('advt/create ') }}">создать обьявление</a>
                         </div>
                     </div>
                 </li>
