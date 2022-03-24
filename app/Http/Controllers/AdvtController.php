@@ -10,6 +10,7 @@ use Illuminate\Http\Request;
 use App\Models\Advt;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Storage;
 use Spatie\Permission\Models\Role;
 
@@ -146,12 +147,16 @@ $out = [];
 
 $out = json_decode($img, true);
 
-        Storage::delete($out);
+//dd($out);
 
-die();
+        $path =  storage_path('app\public');
+
+        foreach($out as $value)
+        {
+            File::delete($path.'/'.$value);
+        }
 
         return redirect('/');
-
     }
 
     public function editPic($data)
@@ -161,15 +166,10 @@ die();
 
     public function test()
     {
-       // echo 'test';
-       // $path = 'C:\OServer\domains\servicebox.loc\storage\app\public\magnezis.jpg';
-       // echo $path;
-       // die();    1648046441_Image-05.jpg
 
-       // return $this->editPic($path);
-        Storage::delete('1648046441_Image-05.jpg');
 
     }
+
     public  function send_message_form()
     {
        return view('advt/send_message');
@@ -177,14 +177,10 @@ die();
 
     public  function send_message(Request $request)
     {
-
         $record = new UserMessage();
         $record->user = Auth::user()->email;
         $record->message = $request->message;
         $record->save();
-
-
-
         return   redirect('send_message')->with('success','Сообщение отправлено !');
     }
 
@@ -203,6 +199,5 @@ die();
         return view('admin.category_create')->with('success','Category created successfully');
 
     }
-
 
 }

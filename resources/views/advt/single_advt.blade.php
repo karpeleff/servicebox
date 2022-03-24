@@ -33,9 +33,9 @@
                             </div>
                         </div>
                         <div class="row mb-20">
-                            <div class="col-sm-12">Контактный телефон: {{$data->contact}}
-
-                            </div>
+                            <div class="col-sm-12">Контактный телефон: {{$data->contact}}</div>
+                            <br>
+                            <div class="col-sm-12">Населенный пункт : {{$data->city}}</div>
                             <div class="col-sm-12">
                                 <div class="product_meta">Категория: <a href="#"> {{$data->cat}}</a></div>
                             </div>
