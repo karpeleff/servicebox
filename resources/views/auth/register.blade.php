@@ -29,7 +29,7 @@
                             <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('Телефон в формате +78888888888') }}</label>
 
                             <div class="col-md-6">
-                                <input id="email" type="phone" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
+                                <input id="email"   class="form-control"   name="email" value="{{ old('email') }}" required autocomplete="email">
 
                                 @error('email')
                                     <span class="invalid-feedback" role="alert">
@@ -58,24 +58,19 @@
 
                             <div class="col-md-6">
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
-                                <div class="form-check">
-                                    <input class="form-check-input" id="check_reg" type="checkbox" value="" id="flexCheckDefault" />
-                                    <label class="form-check-label" for="flexCheckDefault"><a href="/rules">Согласен с  Правилами  сервиса</a> </label>
-                                </div>
+
+                                    <input id="checkbox" type="checkbox" name="checkbox" onchange="document.getElementById('submit').disabled = !this.checked;" />
+                                    <label for="checkbox"><a href="/about">Согласен с  Правилами  сервиса</a></label>
+                                    <br><br>
+                                    <input type="submit" class="btn-default" disabled="disabled" name="submit" id="submit" value="Отправить" />
+
                             </div>
                         </div>
 
-                        <div class="row mb-0">
-                            <div class="col-md-6 offset-md-4">
-                                <button type="submit" id="button_reg" class="btn btn-primary">
-                                    {{ __('Регистрация') }}
-                                </button>
-                            </div>
-                        </div>
                     </form>
                 </div>
             </div>
         </div>
     </div>
-</div>
+
 @endsection

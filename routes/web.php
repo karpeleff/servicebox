@@ -34,9 +34,9 @@ Route::group(['middleware' => ['auth']], function() {
     Route::resource('advt', AdvtController::class);
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'home'])->name('home');
     Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('index');
-    Route::get('/about', [App\Http\Controllers\HomeController::class, 'about'])->name('about');
-});
 
+});
+Route::get('/about', [App\Http\Controllers\HomeController::class, 'about'])->name('about');
 
 //Route::get('send-mail', [HomeController::class, 'sendMail']);
 Route::get('test', [AdvtController::class, 'test']);
@@ -48,4 +48,7 @@ Route::post('send_message', [AdvtController::class, 'send_message'])->name('send
 Route::get('/cat_form',[App\Http\Controllers\AdvtController::class,'cat_form'])->name('cat_form');
 Route::post('/add_cat',[App\Http\Controllers\AdvtController::class,'add_cat'])->name('add_cat');
 
-
+Route::get('/clear-cache', function() {
+    $exitCode = Artisan::call('cache:clear');
+    // return what you want
+});
