@@ -75,7 +75,7 @@ class AdvtController extends Controller
             }
             $img  = json_encode($list);
             $record = new Advt;
-            $record->contact = Auth::user()->email;
+            $record->contact = Auth::user()->email ? Auth::user()->email : 'гость' ;
             $record->category_id = $request->category;
             $record->city = $request->city;
             $record->title = $request->header;
@@ -181,7 +181,7 @@ $out = json_decode($img, true);
     public  function send_message(Request $request)
     {
         $record = new UserMessage();
-        $record->user = Auth::user()->email;
+        $record->user =  Auth::user()->email ? Auth::user()->email : 'гость';
         $record->message = $request->message;
         $record->save();
 
@@ -189,7 +189,7 @@ $out = json_decode($img, true);
         $smsru = new SMSRU('3B3C642C-DDAF-A2AF-C45D-3F4DBA6FADC1');
         $data = new stdClass();
         $data->to = '79020648016';
-        $data->text = 'у вас новое сообщение с сайта';
+        $data->text = 'у вас новое сообщение с сайта от '.Auth::user()->email;
         $sms = $smsru->send_one($data);
 
         return   redirect('send_message')->with('success','Сообщение отправлено !');
