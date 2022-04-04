@@ -12,7 +12,9 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Storage;
+use SMSRU;
 use Spatie\Permission\Models\Role;
+
 
 class AdvtController extends Controller
 {
@@ -181,6 +183,14 @@ $out = json_decode($img, true);
         $record->user = Auth::user()->email;
         $record->message = $request->message;
         $record->save();
+
+//   3B3C642C-DDAF-A2AF-C45D-3F4DBA6FADC1
+        $smsru = new SMSRU('3B3C642C-DDAF-A2AF-C45D-3F4DBA6FADC1');
+        $data = new stdClass();
+        $data->to = '79020648016';
+        $data->text = 'у вас новое сообщение с сайта';
+        $sms = $smsru->send_one($data);
+
         return   redirect('send_message')->with('success','Сообщение отправлено !');
     }
 

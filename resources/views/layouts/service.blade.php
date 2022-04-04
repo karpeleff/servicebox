@@ -72,11 +72,7 @@
                                 </ul>
                             </li>
                             <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Отдам бесплатно</a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="portfolio_boxed_gutter_col_2.html">Детские вещи</a></li>
-                                    <li><a href="portfolio_boxed_gutter_col_3.html">Игрушки</a></li>
-                                    <li><a href="portfolio_boxed_gutter_col_4.html">Кошечки Собачки</a></li>
-                                </ul>
+
                             </li>
                             <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Бытовая техника</a>
                                 <ul class="dropdown-menu">
@@ -90,6 +86,13 @@
                                     <li><a href="portfolio_full_width_gutter_col_2.html">2 Columns</a></li>
                                     <li><a href="portfolio_full_width_gutter_col_3.html">3 Columns</a></li>
                                     <li><a href="portfolio_full_width_gutter_col_4.html">4 Columns</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">недвижимость</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="contact1.html">продажа </a></li>
+                                    <li><a href="contact2.html">покупка</a></li>
+                                    <li><a href="contact3.html">аренда</a></li>
                                 </ul>
                             </li>
                             <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">животные</a>
@@ -143,11 +146,11 @@
                     <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Услуги</a>
                         <ul class="dropdown-menu">
                             <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">такси</a>
-                                <ul class="dropdown-menu">
+                             <!--   <ul class="dropdown-menu">
                                     <li><a href="">Такси  Рощино</a></li>
                                     <li><a href="">Такси Новопокровка</a></li>
                                     <li><a href="">Такси Дальнереченск</a></li>
-                                </ul>
+                                </ul> -->
                             </li>
                             <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">ногти</a>
                                 <ul class="dropdown-menu">
@@ -170,13 +173,7 @@
                                     <li><a href="gallery_col_6.html">6 Columns</a></li>
                                 </ul>
                             </li>
-                            <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">недвижимость</a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="contact1.html">продажа </a></li>
-                                    <li><a href="contact2.html">покупка</a></li>
-                                    <li><a href="contact3.html">аренда</a></li>
-                                </ul>
-                            </li>
+
 
                         </ul>
                     </li>
@@ -204,7 +201,7 @@
                                 </ul>
                             </li>
 
-                            <li><a href="">Восстановить пароль</a></li>
+                        <!--    <li><a href="">Восстановить пароль</a></li> -->
                             <li><a href="{{'/about'}}">О сервисе</a></li>
                             <li><a href="{{'/send_message'}}">напишите нам</a></li>
 

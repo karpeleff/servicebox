@@ -4,17 +4,17 @@
         <section class="module" id="contact">
             <div class="container">
                 <div class="row">
-                    <!-- если успех -->
-
-                    @if ($message = Session::get('success'))
-                        <div class="alert alert-success">
-                            <p>{{ $message }}</p>
-                        </div>
-
-                    @endif
-
-
                     <div class="col-sm-6 col-sm-offset-3">
+
+                        <!-- если успех -->
+
+                        @if ($message = Session::get('success'))
+                            <div class="alert alert-success">
+                                <p>{{ $message }}</p>
+                            </div>
+
+                        @endif
+
                         <h2 class="module-title font-alt">новое сообщение</h2>
                         <div class="module-subtitle font-serif"></div>
                     </div>
