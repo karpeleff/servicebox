@@ -48,4 +48,9 @@ class BizzController extends Controller
 
         return view('biz.show_cat',compact($data));
     }
+
+    public function  electro()
+    {
+        return view('biz.electro');
+    }
 }
