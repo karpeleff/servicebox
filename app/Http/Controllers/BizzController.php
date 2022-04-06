@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Biz;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class BizzController extends Controller
 {
@@ -51,6 +52,23 @@ class BizzController extends Controller
 
     public function  electro()
     {
-        return view('biz.electro');
+        $path = storage_path('');
+
+        //echo $path;
+       // die();
+
+        $quest = file_get_contents($path.'/2.txt');
+        $resp = file_get_contents($path.'/3.txt');
+
+        $key = explode("\r\n", $quest);
+        $val = explode("\r\n", $resp);
+
+//echo count($key);
+
+        $out =   array_combine($key,$val);
+        $i;
+
+        return view('biz.electro',compact('out'));
+
     }
 }
