@@ -26,6 +26,10 @@
             display: none;
             background-color: white;
             overflow: hidden;
+
+        p {
+            font-family: Verdana, Arial, Helvetica, sans-serif;
+            font-size: 11pt; /* Размер шрифта в пунктах */
         }
     </style>
 </head>
@@ -35,7 +39,7 @@
 @foreach($out as $key => $val)
 <button class="accordion">{{$key}}</button>
 <div class="panel">
-    <p>{{$val}}</p>
+    <p><b>{{$val}}</b></p>
 </div>
 
 @endforeach
