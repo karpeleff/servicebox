@@ -60,8 +60,8 @@ class BizzController extends Controller
         $quest = file_get_contents($path.'/2.txt');
         $resp = file_get_contents($path.'/3.txt');
 
-        $key = explode("\r\n", $quest);
-        $val = explode("\r\n", $resp);
+        $key = explode("\n", $quest);
+        $val = explode("\n", $resp);
 
 //echo count($key);
 
