@@ -216,7 +216,7 @@ $out = json_decode($img, true);
     public  function imageResize($list)
     {
 
-        $storage_path =  storage_path('app\public');
+        $storage_path =  storage_path('app/public');
         $sourse_path =  storage_path('images');
 
         foreach ($list  as $item) {
