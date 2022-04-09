@@ -65,7 +65,6 @@ class AdvtController extends Controller
 
            $i = 0;
            $list = [];
-           $img;
 
         foreach ($request->file() as $file) {
             foreach ($file as $f) {
@@ -81,11 +80,12 @@ class AdvtController extends Controller
             $record->title = $request->header;
             $record->text  =  $request->text;
             $record->price =$request->price;
-            $record->img = $img;
-            $record->save();
+            $record->img = $img
+                if($record->save())
+                {
+                  $this->imageResize($list)
+                }
 
-//echo $request->input('text');
-           // return "Успех";
             return   redirect('advt/create')->with('success','Обьявление добавлено успешно !');
         }
     }
@@ -208,6 +208,11 @@ $out = json_decode($img, true);
          Category::create(['name' => $request->input('name')]);
 
         return view('admin.category_create')->with('success','Category created successfully');
+
+    }
+
+    public  function imageResize($list)
+    {
 
     }
 
