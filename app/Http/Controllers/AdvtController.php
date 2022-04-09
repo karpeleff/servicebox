@@ -154,7 +154,7 @@ $out = json_decode($img, true);
 
 //dd($out);
 
-        $path =  storage_path('app\public');
+        $path =  storage_path('app/public');
 
         foreach($out as $value)
         {
