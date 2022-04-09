@@ -67,7 +67,7 @@
 
 
                     <br><br>
-                    {!! Form::label('email', 'Выбрать фото(макс. 5)', array('class' => 'awesome')); !!}
+                    {!! Form::label('email', 'Выбрать фото(макс. 5шт)', array('class' => 'awesome')); !!}
                     <br><br>
                     {!! Form::file('file[]', ['multiple' => true]) !!}
                     <br><br>

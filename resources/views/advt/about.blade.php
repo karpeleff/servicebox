@@ -19,9 +19,11 @@
             <div class="container">
                 <div class="row">
                     <div class="col-sm-6">
-                        <h5 class="font-alt">We’re a digital creative agency</h5><br/>
-                        <p>The European languages are members of the same family. Their separate existence is a myth. For science, music, sport, etc, Europe uses the same vocabulary. The languages only differ in their grammar, their pronunciation and their most common words.</p>
-                        <p>The European languages are members of the same family. Their separate existence is a myth. For science, music, sport, etc, Europe uses the same vocabulary.</p>
+                        <h5 class="font-alt">Добро пожаловать!!! </h5><br/>
+                        <p>сервис запущен в тестовом режиме </p>
+                        <p>Здесь вы можете бесплатно разместить обьявление от частного лица</p>
+                        <p>запрещается публикация о продаже запрещенных Российским законодательством предметов веществ  услуг  оружия и тд</p>
+                        <p> размер фото желательно  уменшить перед загрузкой </p>
                     </div>
                     <div class="col-sm-6">
                         <h6 class="font-alt"><span class="icon-tools-2"></span> Development
