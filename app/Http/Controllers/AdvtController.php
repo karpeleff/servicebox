@@ -6,13 +6,14 @@ use App\Jobs\EditPicJob;
 use App\Models\Category;
 use App\Models\User;
 use App\Models\UserMessage;
+
 use Illuminate\Http\Request;
 use App\Models\Advt;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Storage;
-use SMSRU;
+use Intervention\Image\Facades\Image;use SMSRU;
 use Spatie\Permission\Models\Role;
 use stdClass;
 
@@ -68,7 +69,7 @@ class AdvtController extends Controller
 
         foreach ($request->file() as $file) {
             foreach ($file as $f) {
-                $f->move(storage_path('app/public'), time() . '_' . $f->getClientOriginalName());
+                $f->move(storage_path('images'), time() . '_' . $f->getClientOriginalName());
                 $list[$i] =  time() . '_' . $f->getClientOriginalName();
               $i++;
             }
@@ -80,10 +81,11 @@ class AdvtController extends Controller
             $record->title = $request->header;
             $record->text  =  $request->text;
             $record->price =$request->price;
-            $record->img = $img
+            $record->img = $img;
+
                 if($record->save())
                 {
-                  $this->imageResize($list)
+                  $this->imageResize($list);
                 }
 
             return   redirect('advt/create')->with('success','Обьявление добавлено успешно !');
@@ -213,6 +215,22 @@ $out = json_decode($img, true);
 
     public  function imageResize($list)
     {
+
+        $storage_path =  storage_path('app\public');
+        $sourse_path =  storage_path('images');
+
+        foreach ($list  as $item) {
+
+            $img = Image::make($sourse_path.'/'.$item);
+            $img->resize(665, 750, function ($constraint) {
+                $constraint->aspectRatio();
+            })->save($storage_path.'/'.$item);
+
+            File::delete($sourse_path.'/'.$item);
+
+        }
+
+
 
     }
 
