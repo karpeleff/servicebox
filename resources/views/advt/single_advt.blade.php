@@ -33,15 +33,15 @@
                             </div>
                         </div>
                         <div class="row mb-20">
-                            <div class="col-sm-12">Контактный телефон: {{$data->contact}}</div>
+                            <div class="col-sm-12"><b>Контактный телефон: {{$data->contact}}</b></div>
                             <br>
-                            <div class="col-sm-12">Населенный пункт : {{$data->city}}</div>
+                            <div class="col-sm-12"><b>Населенный пункт : {{$data->city}}</b></div>
                             <div class="col-sm-12">
-                                <div class="product_meta">Категория: <a href="#"> {{$data->cat}}</a></div>
+                                <div class="product_meta"><b>Категория: <a href="#"> {{$data->cat}}</a></b></div>
                             </div>
                             <div class="col-sm-12">
                                 <div class="description">
-                                    <p>Описание: {{$data->text}}.</p>
+                                    <p><b>Описание: {{$data->text}}.</b></p>
                                 </div>
                             </div>
                         </div>
