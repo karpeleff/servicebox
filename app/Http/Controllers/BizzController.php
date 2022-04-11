@@ -44,8 +44,11 @@ class BizzController extends Controller
 
     public function show_cat($cat)
     {
-        //echo $cat;
-        $data = Biz::where('category', '===', $cat)->paginate(8);
+       // dd($cat);
+
+        $data = Biz::where('category', $cat)->paginate(8);
+
+        dd($data);
 
         return view('biz.show_cat',compact($data));
     }
