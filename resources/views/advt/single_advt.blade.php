@@ -37,7 +37,7 @@
                             <br>
                             <div class="col-sm-12"><b>Населенный пункт : {{$data->city}}</b></div>
                             <div class="col-sm-12">
-                                <div class="product_meta"><b>Категория: <a href="#"> {{$data->cat}}</a></b></div>
+                               <!-- <div class="product_meta"><b>Категория: <a href="#"> {{$data->category_id}}</a></b></div> -->
                             </div>
                             <div class="col-sm-12">
                                 <div class="description">

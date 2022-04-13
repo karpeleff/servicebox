@@ -20,6 +20,9 @@
                                 <a class="nav-link" href="{{ url('/advt/create') }}"> {{ __('создать обьявление') }}</a>
                             </li>
                             <li class="nav-item">
+                                <a class="nav-link" href="{{ url('/add_biz') }}"> {{ __('создать бизнес предложение  ') }}</a>
+                            </li>
+                            <li class="nav-item">
                                 <a class="nav-link" href="{{ url('/') }}"> {{ __('на главную') }}</a>
                             </li>
                         </ul>

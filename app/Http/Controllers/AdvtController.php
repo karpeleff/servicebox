@@ -57,6 +57,20 @@ class AdvtController extends Controller
      * @return \Illuminate\Http\Response
      */
 
+    public function  advt_cat($cat)
+{
+    $data = Advt::where('category_id', $cat)->paginate(8);
+
+    // dd($data);
+
+    ///dd($data);
+    // echo $data[0]['category_id'];
+   // die();
+
+    return view('advt.show_cat')->with('data', $data);
+}
+
+
     public function store(Request $request)
     {
         $request->validate([
@@ -102,7 +116,7 @@ class AdvtController extends Controller
     public function show($id)
     {
         $data = Advt::find($id);
-        $data['cat'] = Category::find($data->category_id)->name;
+      //  $data['cat'] = Category::find($data->category_id)->name;
 
         // dd($data);
 

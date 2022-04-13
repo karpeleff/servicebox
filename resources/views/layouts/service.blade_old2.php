@@ -61,35 +61,30 @@
             <div class="collapse navbar-collapse" id="custom-collapse">
                 <ul class="nav navbar-nav navbar-right">
 
-                    <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">обьявления</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="{{ url('advt/create ') }}">создать новое</a></li>
-                            @foreach ($cat_advt as $key => $value)
+                    <li class="dropdown"><a class="dropdown-toggle" href="/notes/05_10" data-toggle="dropdown">Обьявления</a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="{{ url('advt/create ') }}" >создать обьявление</a></li>
 
-                                <li><a href="{{ asset('/advt_cat/'.$key)}}">{{ $value }}</a></li>
-                            @endforeach
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Услуги</a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">такси</a>
+
+                            </li>
 
                         </ul>
                     </li>
-                    <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">бизнес услуги</a>
-                        <ul class="dropdown-menu">
-
-                            @foreach ($cat as $key => $value)
-
-                                <li><a href="{{ asset('/biz_cat/'.$key)}}">{{ $value }}</a></li>
-                            @endforeach
-
-                        </ul>
-                    </li>
-
-                    <li class="dropdown"><a class="dropdown-toggle" href="{{'/send_message'}}" data-toggle="dropdown">контакты</a>
+                    <li class="dropdown"><a class="dropdown-toggle" href="documentation.html" data-toggle="dropdown">контакты</a>
 
                         <ul class="dropdown-menu">
                             <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown" style="color:red ">экстра инфо</a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="tel: ">скорая</a></li>
-                                    <li><a href="tel: ">полиция </a></li>
-                                    <li><a href="tel: ">мчс</a></li>
+                                    <li><a href="tel: +79020648016">скорая</a></li>
+                                    <li><a href="tel: +79020648016">полиция </a></li>
+                                    <li><a href="tel: +79020648016">мчс</a></li>
                                 </ul>
                             </li>
                             <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown" >вы вошли как: {{ Auth::user() ? Auth::user()->name : 'guest' }}</a>
@@ -106,7 +101,7 @@
                                 </ul>
                             </li>
 
-                            <!--    <li><a href="">Восстановить пароль</a></li> -->
+                        <!--    <li><a href="">Восстановить пароль</a></li> -->
                             <li><a href="{{'/about'}}">О сервисе</a></li>
                             <li><a href="{{'/send_message'}}">напишите нам</a></li>
 

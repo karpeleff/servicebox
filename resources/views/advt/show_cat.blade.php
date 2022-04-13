@@ -30,14 +30,14 @@
     <div class="main">
         <div class="container">
             <div class="row">
-
-                @php
-                    $routeInfo = \Route::current();
-                      $category =  $routeInfo->cat;
-                       // dd($routeInfo);
-                @endphp
                 <div class="col-sm-6 col-sm-offset-3">
-                    <h2 class="module-title font-alt">{{$cat[$category]}}</h2>
+@php
+    $routeInfo = \Route::current();
+      $cat =  $routeInfo->cat;
+       // dd($routeInfo);
+@endphp
+
+                    <h2 class="module-title font-alt">{{$cat_advt[$cat]}}</h2>
                 </div>
             </div>
             <div class="row multi-columns-row">
@@ -46,17 +46,17 @@
             @foreach ($data as $item)
                 <!--  LOOP  -->
                     @php
-                        $img =  json_decode($item->img);
-                     //dd($img);
+
+                     $img =  json_decode($item->img);
 
                     @endphp
 
                     <div class="col-sm-6 col-md-3 col-lg-3">
                         <div class="shop-item">
-                            <div class="shop-item-image"> <img src="{{asset("storage/biz/".$img[0])}}" alt=""/>
-                                <div class="shop-item-detail"><a  href="{{ url('/biz_show/'.$item->id) }}"   class="btn btn-round btn-b"><span class="">подробнее</span></a></div>
+                            <div class="shop-item-image"> <img src="{{asset("storage/".$img[0])}}" alt=""/>
+                                <div class="shop-item-detail"><a  href="{{ url('/advt/'.$item->id) }}"   class="btn btn-round btn-b"><span class="">подробнее</span></a></div>
                             </div>
-                            <h4 class="shop-item-title font-alt"><a href="#">{{$item->title}}</a></h4>
+                            <h4 class="shop-item-title font-alt"><a href="#">{{$item->title}}</a></h4>{{$item->price}} Р.
                         </div>
                     </div>
 
@@ -65,7 +65,7 @@
 
 
             </div>
-
+            {{ $data->links() }}
             <br><br>
         </div>
 

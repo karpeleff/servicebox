@@ -36,7 +36,9 @@ Route::group(['middleware' => ['auth']], function() {
     Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('index');
     Route::get('/add_biz', [App\Http\Controllers\BizzController::class, 'add_biz'])->name('add_biz');
     Route::post('/store_biz', [App\Http\Controllers\BizzController::class, 'store_biz'])->name('store_biz');
-    Route::get('/show_cat/{cat}', [App\Http\Controllers\BizzController::class, 'show_cat'])->name('show_cat');
+    Route::get('/biz_cat/{cat}', [App\Http\Controllers\BizzController::class, 'biz_cat'])->name('biz_cat');
+    Route::get('/advt_cat/{cat}', [App\Http\Controllers\AdvtController::class, 'advt_cat'])->name('advt_cat');
+    Route::get('/biz_show/{id}', [App\Http\Controllers\BizzController::class, 'biz_show'])->name('biz_show');
 
 });
 Route::get('/about', [App\Http\Controllers\HomeController::class, 'about'])->name('about');

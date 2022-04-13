@@ -38,19 +38,7 @@
                             </ul>
                         </div>
                     @endif
-                    @php
-                        $city = [
-                         'Новопокровка'  =>    'Новопокровка',
-                         'Рощино'        =>  'Рощино',
-                         'Богуславец'    =>   'Богуславец',
-                         'Вострецово'    =>     'Вострецово',
-                         'Восток'        =>    'Восток',
-                         'Новокрещенка'  =>    'Новокрещенка',
-                         'Мельничное'    =>    'Мельничное',
-                         'Лукьяновка'    =>    'Лукьяновка',
-                         'Гончаровка'    =>   'Гончаровка',
-                                ];
-                    @endphp
+
 
                     {!!Form::open(['route' => 'advt.store', 'files' => true,'method'=>'POST'])!!}
                     {!!Form::text('header',null,['class' => 'form-control','placeholder' => 'заголовок']);!!}
@@ -63,7 +51,7 @@
                     {!! Form::select('city', $city, null, ['class' => 'form-control']) !!}
                     <br><br>
                     {!! Form::label('email', 'Категория', array('class' => 'awesome')); !!}
-                    {!! Form::select('category', $data, null, ['class' => 'form-control']) !!}
+                    {!! Form::select('category', $cat_advt, null, ['class' => 'form-control']) !!}
 
 
                     <br><br>

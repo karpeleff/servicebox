@@ -16,6 +16,7 @@ class CreateBizsTable extends Migration
         Schema::create('bizs', function (Blueprint $table) {
             $table->id();
             $table->string('category',100);
+            $table->string('tel',50);
             $table->string('city', 100);
             $table->string('title', 100);
             $table->text('text');
