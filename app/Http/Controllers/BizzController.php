@@ -10,6 +10,15 @@ use Intervention\Image\Facades\Image;
 
 class BizzController extends Controller
 {
+    public function __construct()
+    {
+        // $this->middleware('auth');
+       //  $this->middleware('permission:biz-create', ['only' => ['add_biz']]);
+        // $this->middleware(['role:super-admin','permission:publish articles|edit articles']);
+        // $this->middleware(['role:Admin']);
+    }
+
+
     public function  add_biz()
     {
         return view('biz.create');
