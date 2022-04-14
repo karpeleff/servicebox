@@ -65,8 +65,11 @@
                         <!-- end -->
                     @endforeach
                 @else
-                    <h4 class="shop-item-title font-alt">здесь пока ничего нет</h4>
-                    <a class="" href="{{ url('advt/create ') }}">создай обьявление первым </a>
+                    <div  class="shop-item" >
+                        <h4 class="shop-item-title font-alt "    >здесь пока ничего нет</h4>
+                        <a class="" href="{{ url('advt/create ') }}">создай обьявление первым </a>
+                    </div>
+
                 @endif
 
 
