@@ -32,7 +32,7 @@ Route::group(['middleware' => ['auth']], function() {
     Route::resource('roles', RoleController::class);
     Route::resource('users', UserController::class);
     Route::resource('advt', AdvtController::class);
-    Route::get('/home', [App\Http\Controllers\HomeController::class, 'home'])->name('home');
+    Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('index');
     Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('index');
     Route::get('/add_biz', [App\Http\Controllers\BizzController::class, 'add_biz'])->name('add_biz');
     Route::post('/store_biz', [App\Http\Controllers\BizzController::class, 'store_biz'])->name('store_biz');
