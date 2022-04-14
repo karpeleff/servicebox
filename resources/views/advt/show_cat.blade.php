@@ -43,25 +43,31 @@
             <div class="row multi-columns-row">
 
 
-            @foreach ($data as $item)
-                <!--  LOOP  -->
-                    @php
+                @if($data->count() !== 0)
+                    @foreach ($data as $item)
+                        <!--  LOOP  -->
+                            @php
 
-                     $img =  json_decode($item->img);
+                                $img =  json_decode($item->img);
 
-                    @endphp
+                            @endphp
 
-                    <div class="col-sm-6 col-md-3 col-lg-3">
-                        <div class="shop-item">
-                            <div class="shop-item-image"> <img src="{{asset("storage/".$img[0])}}" alt=""/>
-                                <div class="shop-item-detail"><a  href="{{ url('/advt/'.$item->id) }}"   class="btn btn-round btn-b"><span class="">подробнее</span></a></div>
+
+                            <div class="col-sm-6 col-md-3 col-lg-3">
+                                <div class="shop-item">
+                                    <div class="shop-item-image"> <img src="{{asset("storage/".$img[0])}}" alt=""/>
+                                        <div class="shop-item-detail"><a  href="{{ url('/advt/'.$item->id) }}"   class="btn btn-round btn-b"><span class="">подробнее</span></a></div>
+                                    </div>
+                                    <h4 class="shop-item-title font-alt"><a href="#">{{$item->title}}</a></h4>{{$item->price}} Р.
+                                </div>
                             </div>
-                            <h4 class="shop-item-title font-alt"><a href="#">{{$item->title}}</a></h4>{{$item->price}} Р.
-                        </div>
-                    </div>
 
-                    <!-- end -->
-                @endforeach
+                            <!-- end -->
+                        @endforeach
+                @else
+                        <h4 class="shop-item-title font-alt">здесь пока ничего нет</h4>
+                        <a class="" href="{{ url('advt/create ') }}">создай обьявление первым </a>
+                @endif
 
 
             </div>
