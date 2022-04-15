@@ -45,6 +45,7 @@
                     <br><br>
                     {!!Form::textarea('text',null,['class' => 'form-control','placeholder' => 'текст']);!!}
                     <br><br>
+                    {!! Form::label('price', 'только цифры (мин: 2 макс: 6)', array('class' => 'awesome')); !!}
                     {!!Form::text('price',null,['class' => 'form-control','placeholder' => 'цена']);!!}
                     <br><br>
                      {!! Form::label('email', 'Населенный пункт', array('class' => 'awesome')); !!}
