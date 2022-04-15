@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Jobs\EditPicJob;
 use App\Models\Category;
+use App\Models\Reference;
 use App\Models\User;
 use App\Models\UserMessage;
 
@@ -245,6 +246,20 @@ $out = json_decode($img, true);
         }
 
 
+
+    }
+
+    public function ref_form()
+    {
+        return view('admin.reference_create');
+    }
+
+    public function add_ref(Request $request)
+    {
+
+        Reference::create(['tel' => $request->input('tel'),'text' => $request->input('text')]);
+
+        return view('admin.reference_create')->with('success','Category created successfully');
 
     }
 

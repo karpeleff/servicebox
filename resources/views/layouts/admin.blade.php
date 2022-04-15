@@ -50,6 +50,7 @@
                         <li><a class="nav-link" href="{{ route('users.index') }}">Manage Users</a></li>
                         <li><a class="nav-link" href="{{ route('roles.index') }}">Manage Role</a></li>
                         <li><a class="nav-link" href="{{ route('cat_form') }}">Add Category</a></li>
+                        <li><a class="nav-link" href="{{ route('ref_form') }}">Add reference</a></li>
                         <!-- Authentication Links -->
                     @endrole
 

@@ -41,7 +41,8 @@ Route::group(['middleware' => ['auth']], function() {
     Route::get('/biz_show/{id}', [App\Http\Controllers\BizzController::class, 'biz_show'])->name('biz_show');
     Route::get('/aleksey', [App\Http\Controllers\HomeController::class, 'home'])->name('home');
     Route::get('/reference', function () {
-        return view('advt.reference');
+        $ref = \App\Models\Reference::all();
+        return view('advt.reference')->with('ref', $ref);
     });
 
 });
@@ -56,6 +57,8 @@ Route::post('send_message', [AdvtController::class, 'send_message'])->name('send
 
 Route::get('/cat_form',[App\Http\Controllers\AdvtController::class,'cat_form'])->name('cat_form');
 Route::post('/add_cat',[App\Http\Controllers\AdvtController::class,'add_cat'])->name('add_cat');
+Route::get('/ref_form',[App\Http\Controllers\AdvtController::class,'ref_form'])->name('ref_form');
+Route::post('/add_ref',[App\Http\Controllers\AdvtController::class,'add_ref'])->name('add_ref');
 
 Route::get('/clear-cache', function() {
     $exitCode = Artisan::call('cache:clear');
