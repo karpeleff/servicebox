@@ -40,6 +40,9 @@ Route::group(['middleware' => ['auth']], function() {
     Route::get('/advt_cat/{cat}', [App\Http\Controllers\AdvtController::class, 'advt_cat'])->name('advt_cat');
     Route::get('/biz_show/{id}', [App\Http\Controllers\BizzController::class, 'biz_show'])->name('biz_show');
     Route::get('/aleksey', [App\Http\Controllers\HomeController::class, 'home'])->name('home');
+    Route::get('/reference', function () {
+        return view('advt.reference');
+    });
 
 });
 Route::get('/about', [App\Http\Controllers\HomeController::class, 'about'])->name('about');
