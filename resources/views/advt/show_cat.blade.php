@@ -69,13 +69,10 @@
                         <a class="" href="{{ url('advt/create ') }}">создай обьявление первым </a>
                 @endif
 
-
             </div>
             {{ $data->links() }}
             <br><br>
         </div>
-
-
         <div class="module-small bg-dark">
 
         </div>
