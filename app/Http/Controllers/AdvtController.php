@@ -209,6 +209,8 @@ $out = json_decode($img, true);
         $data->text = 'у вас новое сообщение с сайта от '.Auth::user()->email;
         $sms = $smsru->send_one($data);
 
+        $this->myMicroBot($request->message);
+
         return   redirect('send_message')->with('success','Сообщение отправлено !');
     }
 
@@ -261,6 +263,33 @@ $out = json_decode($img, true);
 
         return view('admin.reference_create')->with('success','Category created successfully');
 
+    }
+
+    public function    myMicroBot($message)
+    {
+        $tg_user = '1298815822'; // id пользователя, для отправки сообщения
+        $bot_token = '5341890072:AAGssXpXuVjhEzzy6WeWVZYZHh8Gy6hCHeI'; // токен бота
+
+       // $text = "Первая строка сообщения со ссылкой \n Вторая строка с жирным текстом";
+
+// параметры, которые отправятся в api телеграм
+        $params = array(
+            'chat_id' => $tg_user, // id получателя
+            'text' => $message, // текст сообщения
+            'parse_mode' => 'HTML', // режим отображения сообщения HTML (не все HTML теги работают)
+        );
+
+        $curl = curl_init();
+        curl_setopt($curl, CURLOPT_URL, 'https://api.telegram.org/bot'.$bot_token.'/sendMessage'); // адрес вызова api функции телеграм
+        curl_setopt($curl, CURLOPT_POST, true); // отправка методом POST
+        curl_setopt($curl, CURLOPT_TIMEOUT, 10); // время выполнения запроса
+        curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($curl, CURLOPT_FOLLOWLOCATION , true);
+        curl_setopt($curl, CURLOPT_POSTFIELDS, $params); // параметры запроса
+        $result = curl_exec($curl); // запрос к api
+        curl_close($curl);
+
+       // var_dump(json_decode($result));
     }
 
 }
